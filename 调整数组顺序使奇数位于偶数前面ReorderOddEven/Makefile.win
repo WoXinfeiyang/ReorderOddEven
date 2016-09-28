@@ -1,0 +1,29 @@
+# Project: 调整数组顺序使奇数位于偶数前面ReorderOddEven
+# Makefile created by Dev-C++ 5.2.0.3
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = ReorderOddEvenMain.o $(RES)
+LINKOBJ  = ReorderOddEvenMain.o $(RES)
+LIBS     = -L"D:/Program Files (x86)/Dev-Cpp/MinGW32/lib" -static-libstdc++ -static-libgcc  
+INCS     = -I"D:/Program Files (x86)/Dev-Cpp/MinGW32/include" 
+CXXINCS  = -I"D:/Program Files (x86)/Dev-Cpp/MinGW32/include" 
+BIN      = 调整数组顺序使奇数位于偶数前面ReorderOddEven.exe
+CXXFLAGS = $(CXXINCS)  
+CFLAGS   = $(INCS)  
+RM       = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before 调整数组顺序使奇数位于偶数前面ReorderOddEven.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o "调整数组顺序使奇数位于偶数前面ReorderOddEven.exe" $(LIBS)
+
+ReorderOddEvenMain.o: ReorderOddEvenMain.c
+	$(CC) -c ReorderOddEvenMain.c -o ReorderOddEvenMain.o $(CFLAGS)
